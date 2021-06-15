@@ -43,9 +43,6 @@ func test_load_scene() ->void:
 	main_scene.blargh()
 	assert_eq(scene.name, current_scene.get_node(scene.name).name)
 
-func test_parametarize(source=use_parameters([[1,2,3],[1,2,3],[1,2,3]])):
-	assert_eq(source[0], 1)
-
 func test_multiple_assert():
 	assert_true(1 < 2)
 	assert_true(1 < 2)
