@@ -46,7 +46,8 @@ func test_load_scene() ->void:
 var params = [
 	[1],
 	[1],
-	[0],
+	[1],
+	[1],
 	[1]
 ]
 func test_parametarize(source=use_parameters(params)):
