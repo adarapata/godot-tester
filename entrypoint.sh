@@ -83,7 +83,9 @@ while read line; do
         TESTS=$PASSED+$FAILED
     fi
 done <<< "$(echo "${outp}")"
-
+echo $PASSED
+echo $FAILED
+echo $TESTS
 # ensuring failing enough tests / being timed out cause failure for
 # the action
 passrate=".0"
