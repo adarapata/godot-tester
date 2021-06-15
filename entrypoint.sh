@@ -80,7 +80,7 @@ while read line; do
         temp=$(echo $line | sed 's/ .*//')
         # credit : https://stackoverflow.com/questions/17998978/removing-colors-from-output
         temp=$(echo $temp | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')
-        TESTS=$PASSED+$FAILED
+        TESTS=`echo "scale=3; $PASSED+$FAILED"|bc -l`
     fi
 done <<< "$(echo "${outp}")"
 echo $PASSED
